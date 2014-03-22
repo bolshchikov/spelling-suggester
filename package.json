@@ -11,6 +11,10 @@
     "csv": ">=0.3.x",
     "q": ">=1.x.x"
   },
+  "devDependencies": {
+    "mocha": ">=1.x.x",
+    "chai": ">=1.x.x"
+  },
   "engines": {
     "node": ">=0.10"
   }

@@ -7,14 +7,13 @@
 var csv = require('csv'),
     Q = require('q');
 
-var QUERIES_PATH = './input/misspelled_queries.csv';
-var FREQUENCY_PATH = './input/word_frequency.csv';
 
-function parseQueries() {
+
+function parseQueries(path) {
   var dfd = Q.defer();
   var queries = [];
   csv()
-    .from.path(QUERIES_PATH)
+    .from.path(path)
     .on('data', function (row) {
       // with removed newlines
       queries.push(row.replace(/^\s+|\s+$/g, ''));
@@ -25,11 +24,11 @@ function parseQueries() {
   return dfd.promise;
 }
 
-function parseFrequencies() {
+function parseFrequencies(path) {
   var dfd = Q.defer();
   var frequencies = {};
   csv()
-    .from.path(FREQUENCY_PATH)
+    .from.path(path)
     .on('data', function (row) {
       var args;
       // remove newlines
