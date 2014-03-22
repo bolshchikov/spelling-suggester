@@ -6,11 +6,11 @@
 ### How to run
 This project in written on node (>= 0.10.x). Firstly, run
 
-  `npm install`
+    npm install
 
 so that npm would install all dependencies of the project, and then run
 
-  `node suggester.js`
+    node suggester.js
 
 ### Dependencies
 * `q` for promises
