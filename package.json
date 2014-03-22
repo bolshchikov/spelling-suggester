@@ -1,0 +1,17 @@
+{
+  "name": "suggester",
+  "version": "0.0.1",
+  "author": "Sergey N. Bolshchikov <sergey@bolshchikov.net>",
+  "main": "./suggester.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bolshchikov/fluencia-task.git"
+  },
+  "dependencies": {
+    "csv": ">=0.3.x",
+    "q": ">=1.x.x"
+  },
+  "engines": {
+    "node": ">=0.10"
+  }
+}
