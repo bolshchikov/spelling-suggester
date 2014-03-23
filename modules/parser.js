@@ -7,9 +7,9 @@
 var csv = require('csv'),
     Q = require('q');
 
-
-
 function parseQueries(path) {
+  // TODO add check of path
+
   var dfd = Q.defer();
   var queries = [];
   csv()
