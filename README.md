@@ -15,5 +15,6 @@ so that npm would install all dependencies of the project, and then run
 ### Dependencies
 * `q` for promises
 * `csv` for parsing csv files
+* `mocha` and `chai` for tests
 
 

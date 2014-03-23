@@ -8,7 +8,9 @@ var csv = require('csv'),
     Q = require('q');
 
 function parseQueries(path) {
-  // TODO add check of path
+  if (path === void 0 || typeof path !== 'string') {
+    throw new TypeError('invalid arguments');
+  }
 
   var dfd = Q.defer();
   var queries = [];
@@ -25,6 +27,10 @@ function parseQueries(path) {
 }
 
 function parseFrequencies(path) {
+  if (path === void 0 || typeof path !== 'string') {
+    throw new TypeError('invalid arguments');
+  }
+
   var dfd = Q.defer();
   var frequencies = {};
   csv()
