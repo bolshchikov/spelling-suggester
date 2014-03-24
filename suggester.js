@@ -4,7 +4,8 @@
  * @author sergey
  */
 
-var Q = require('q'),
+var fs = require('fs'),
+    Q = require('q'),
     parser = require('./modules/parser'),
     distance = require('./modules/distance');
 
@@ -32,6 +33,17 @@ var FREQUENCY_PATH = './input/word_frequency.csv';
       return res;
     })
     .done(function (result) {
-      console.log(result);
+      var suggestions;
+      suggestions = fs.createWriteStream('suggestions.txt');
+      suggestions.once('open', function () {
+        var key, str;
+        for (key in result) {
+          if (result.hasOwnProperty(key)) {
+            str = "* " + key + ": ['" + result[key].join("', '") + "']\n";
+            suggestions.write(str);
+          }
+        }
+        suggestions.end();
+      });
     });
 })();
