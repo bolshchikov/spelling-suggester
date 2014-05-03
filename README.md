@@ -1,6 +1,5 @@
 ## Spelling Suggester
 
-> Task for [Fluencia](http://www.fluencia.com/)
 
 
 ### How to run
